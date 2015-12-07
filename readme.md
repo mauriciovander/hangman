@@ -18,7 +18,11 @@ The looked for word is randomly selected from a list, which also includes the fo
 
 
 • Only letters from A to Z without special characters are selectable by the player to guess the entire word.
+
 • At the beginning of the game all letters in the word are made unrecognizable with one underline.
+
 • The game is completed successfully if all letters of a word are revealed.
+
 • The game ends after the 6th unsuccessful attempt.
+
 • The game can be restarted after the end.
