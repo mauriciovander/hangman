@@ -1,21 +1,24 @@
-## Lumen PHP Framework
+## Task
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+Develop an object-oriented “Hangman” in HTML5, CSS and object oriented Javascript which is playable within a web browser.
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## Rules of the game Hangman
 
-## Official Documentation
+In the Hangman game a randomly chosen word or phrase by the computer has to be guessed. The looked for word is made unrecognizable with underlines, the number of underlines is identical to the number of letters in the looked for word.
+The guessing of the looked for word is done by manually selecting individual letters of the player, where each letter can only be selected once. The available letters for the word are limited to "A" through "Z" without any special characters. Every rightly guessed letter in the word is uncovered in the entire word at the appropriate position. If a letter guessed by the player is NOT in the looked for word, it is rated as an unsuccessful attempt. A maximum number of 6 unsuccessful attempts is permitted before a game is lost.
+The following rules and functions have to be implemented:
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+The looked for word is randomly selected from a list, which also includes the following words/phrases:
+- IQU
+- PERFORMANCEMARKETING o GAMEANALYTICS
+- HANGMAN
+- PEELINGTHEONION
+- COHORT ANALYSIS
+- GAMEON!
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+• Only letters from A to Z without special characters are selectable by the player to guess the entire word.
+• At the beginning of the game all letters in the word are made unrecognizable with one underline.
+• The game is completed successfully if all letters of a word are revealed.
+• The game ends after the 6th unsuccessful attempt.
+• The game can be restarted after the end.
