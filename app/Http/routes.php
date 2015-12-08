@@ -12,5 +12,9 @@
 */
 
 $app->get('/', function () use ($app) {
-    return $app->welcome();
+    return view('game', []);
 });
+
+$app->post('/new', 'GameController@init');
+
+$app->post('/play', 'GameController@play');

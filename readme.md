@@ -38,3 +38,4 @@ A maximum number of 6 unsuccessful attempts is permitted before a game is lost.
 • The game ends after the 6th unsuccessful attempt.
 
 • The game can be restarted after the end.
+
