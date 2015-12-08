@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Word;
 use Laravel\Lumen\Routing\Controller as Controller;
 use Illuminate\Http\Request as Request;
-use Illuminate\Support\Facades\DB;
 
-class GameController extends Controller
+class GameController extends Controller implements GameControllerInterface
 {
 
     public function play(Request $request)
@@ -59,9 +59,7 @@ class GameController extends Controller
 
     private function selectRandomWord()
     {
-
-        $words = app('db')->select("SELECT * FROM words order by rand() limit 1");
-        $word = reset($words);
+        $word = Word::orderByRaw("RAND()")->first();
         return $word->word;
     }
 }
